@@ -27,5 +27,5 @@ Setup: module.exports = {\
 File: .browserslistrc\
 Setup: last 5 versions\
 
-> 0.5%\
+> `>0.5%`\
 >  IE 10
