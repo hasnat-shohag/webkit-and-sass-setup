@@ -2,36 +2,63 @@
 
 # Sass Install and Setup to the directory
 
-Extension: Live Sass Compiler\
-Install-Command: `sudo npm install -g sass`\
-Link the directory: `sass --watch assets/sass/style.sass assets/styles/style.css`
+-   Extension: Live Sass Compiler
+
+-   Install-Command:
+
+          sudo npm install -g sass
+
+-   Link the directory:
+
+          sass --watch assets/sass/style.sass assets/styles/style.css
 
 Live Sass Compiler Workspace Settings:
 
-
-`{ "prettier.tabWidth": 4,
-"liveSassCompile.settings.autoprefix": [],
-"liveSassCompile.settings.formats": [ // This is Default. // { // "format": "expanded", // "extensionName": ".css", // "savePath": null // }, // You can add more // { // "format": "compressed", // "extensionName": ".min.css", // "savePath": "/dist/css" // }, // More Comple { "format": "compressed", "extensionName": ".min.css", // "savePath": "${workspaceRoot}\\styles\\styles.css" "savePath": "/assets/styles" } ], "liveSassCompile.settings.includeItems": ["/assets/sass/style.sass"] }`
-
+    {
+        "prettier.tabWidth": 4,
+        "liveSassCompile.settings.autoprefix": [],
+        "liveSassCompile.settings.includeItems": ["/assets/sass/style.sass"],
+        "liveSassCompile.settings.formats": [
+            { 
+                "format": "compressed", 
+                "extensionName": ".min.css",
+                "savePath": "/assets/styles" 
+            }
+        ]
+    }
 
 # Webkit Install Process
 
-Install-command: `npm i -G postcss postcss-cli`
+-   Install-command:
 
-Also Install: `npm i -D postcss-preset-env`
+          npm i -G postcss postcss-cli
 
-Usage-command: `npx postcss assets/styles/style.css -o assets/styles/output.css -w`
+-   Also Install:
 
-At last: npm install
+          npm i -D postcss-preset-env
 
-File : postcss.config.js \
-Setup: 
-`module.exports = {
- plugins: [require("postcss-preset-env")],
- };`
+- Usage-command: 
+    
+        npx postcss assets/styles/style.css -o assets/styles/output.css -w
 
-File: .browserslistrc\
-Setup: 
-`last 5 versions
-``>0.5%``
-IE 10`
+- At last: 
+
+        npm install
+
+<h1>Create File to the Main directory</h1>
+
+- File Name: postcss.config.js
+
+-   Setup:
+
+          module.exports = {
+              plugins: [require("postcss-preset-env")],
+          };
+
+- File Name: .browserslistrc
+
+- Setup:
+
+        last 5 versions
+        >0.5%
+        IE 10
